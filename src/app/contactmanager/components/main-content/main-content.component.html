@@ -1,0 +1,28 @@
+<div *ngIf="!user">
+  Pleased select a contact.
+</div>
+<div *ngIf="user">
+
+
+    <mat-card>
+        <mat-card-header>
+          <mat-icon mat-card-avatar svgIcon="{{user.avatar}}"></mat-icon>
+          <mat-card-title>{{user.name}}</mat-card-title>
+          <mat-card-subtitle>Birthday {{user.birthDate | date:'d LLLL'}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+
+            <mat-tab-group>
+                <mat-tab label="Bio"> {{user.bio}} </mat-tab>
+
+                <!-- <mat-tab label="Second" *ngFor="let note in user.notes"> Content 2 </mat-tab> -->
+              </mat-tab-group>
+          <p>
+
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+
+</div>
+
