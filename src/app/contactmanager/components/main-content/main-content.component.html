@@ -15,7 +15,9 @@
             <mat-tab-group>
                 <mat-tab label="Bio"> {{user.bio}} </mat-tab>
 
-                <!-- <mat-tab label="Second" *ngFor="let note in user.notes"> Content 2 </mat-tab> -->
+                <mat-tab label="Notes">
+                   <app-notes [notes]="user.notes"></app-notes>
+                </mat-tab>
               </mat-tab-group>
           <p>
 
