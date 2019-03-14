@@ -8,8 +8,9 @@
   <router-outlet></router-outlet>
 </mat-sidenav-container> -->
 
+<!-- [ngClass]="{ 'dark-theme': darkTheme }" "-->
 
-<mat-sidenav-container class="app-sidenav-container" >
+<mat-sidenav-container class="app-sidenav-container" [ngClass]="{ 'dark-theme': darkTheme }" [dir]="direction">
 
     <mat-sidenav #sidenav class="app-sidenav mat-elevation-z24"
         [opened]="!isScreenSmall()"
@@ -29,11 +30,24 @@
     </mat-sidenav>
 
     <mat-sidenav-content class="app-sidenav-content">
-        <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+        <app-toolbar
+            (toggleSidenav)="sidenav.toggle()"
+            (toggleTheme)="toggleTheme()"
+            (toggleDirection)="toggleDirection()"
+            ></app-toolbar>
         <div class="wrapper">
             <router-outlet></router-outlet>
         </div>
 
+        <div class="important-item">
+            <div class="important-item-text">1. Test</div>
+            <div class="fancy-circle"></div>
+        </div>
+
+        <div class="important-item">
+            <div class="important-item-text">2. Second</div>
+            <div class="fancy-circle"></div>
+        </div>
 
     </mat-sidenav-content>
 

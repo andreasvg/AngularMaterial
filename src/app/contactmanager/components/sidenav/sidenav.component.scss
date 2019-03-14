@@ -19,3 +19,48 @@
 .wrapper {
   margin: 50px;
 }
+
+$background: rgb(207, 207, 232);
+$background2: darken($background, 5%);
+
+.test {
+  margin: 30px;
+  padding: 30px;
+}
+
+.important-item {
+  position: relative;
+  display: inline-block;
+}
+
+.fancy-circle {
+  border-radius: 80px;
+  border-right-color: $background;
+  border-top-color: $background2;
+  border-bottom-color: $background;
+  border-left-color: $background2;
+  border-width: 80px;
+  border-style: solid;
+  height: 0px;
+  width: 0px;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.important-item-text {
+  display: inline-block;
+  position: relative;
+  top: 70px;
+  left: 10px;
+  z-index: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 137px;
+/*   border-color: black;
+  border-width: 1px;
+  border-style: solid; */
+  text-align: center;
+}
